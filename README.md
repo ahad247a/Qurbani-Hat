@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐾 PoshurHat - Digital Cattle Market
 
-## Getting Started
+**PoshurHat** হলো একটি আধুনিক এবং রেসপনসিভ ওয়েব অ্যাপ্লিকেশন, যেখানে ব্যবহারকারীরা ঘরে বসেই কোরবানির জন্য সুস্থ ও সবল পশু (গরু, ছাগল) পছন্দ করতে পারেন। এটি মূলত একটি ডিজিটাল পশুর হাট যা ক্রেতা ও বিক্রেতার মধ্যে সহজ যোগাযোগ নিশ্চিত করে।
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 মূল ফিচারসমূহ (Key Features)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **ডায়নামিক অ্যানিমেল ডিসপ্লে:** JSON ডাটা ব্যবহার করে পশুর তালিকা সুন্দরভাবে প্রদর্শিত হয়।
+*   **ফিচারড সেকশন:** হোম পেজে সেরা পশুগুলোকে আলাদাভাবে হাইলাইট করা হয়েছে।
+*   **লগইন প্রোটেকশন:** কোনো পশুর বিস্তারিত তথ্য দেখতে চাইলে ব্যবহারকারীকে অবশ্যই লগইন করতে হবে।
+*   **অ্যাডভান্সড সর্টিং:** দাম অনুযায়ী (কম থেকে বেশি বা বেশি থেকে কম) পশুগুলোকে সাজানোর সুবিধা।
+*   **রেসপনসিভ ডিজাইন:** মোবাইল, ট্যাবলেট এবং ডেস্কটপ সব ডিভাইসে ব্যবহার উপযোগী।
+*   **প্রিমিয়াম ইউআই:** ফ্রেমার মোশন (Framer Motion) ব্যবহার করে স্মুথ এনিমেশন এবং আধুনিক ইন্টারফেস।
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 টেকনোলজি স্ট্যাক (Tech Stack)
 
-## Learn More
+*   **Frontend:** Next.js (App Router), React.js, Tailwind CSS
+*   **Animation:** Framer Motion
+*   **Icons:** Lucide React
+*   **Authentication:** Better Auth (AuthClient)
+*   **Data Source:** JSON API
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 স্ক্রিনশট (Screenshots)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Home Page & Featured Animals
+![Home Page](https://via.placeholder.com/800x400?text=PoshurHat+Home+Page)
 
-## Deploy on Vercel
+### Animal Details Page
+![Details Page](https://via.placeholder.com/800x400?text=Animal+Details+View)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 লোকাল সেটআপ (Local Setup)
+
+প্রোজেক্টটি আপনার কম্পিউটারে রান করতে নিচের ধাপগুলো অনুসরণ করুন:
+
+1.  **রিপোজিটরি ক্লোন করুন:**
+    ```bash
+    git clone [https://github.com/your-username/poshurhat.git](https://github.com/your-username/poshurhat.git)
+    ```
+
+2.  **প্রজেক্ট ডিরেক্টরিতে যান:**
+    ```bash
+    cd poshurhat
+    ```
+
+3.  **ডিপেন্ডেন্সি ইনস্টল করুন:**
+    ```bash
+    npm install
+    ```
+
+4.  **সার্ভার রান করুন:**
+    ```bash
+    npm run dev
+    ```
+    এখন ব্রাউজারে `http://localhost:3000` লিঙ্কে গিয়ে প্রোজেক্টটি দেখুন।
+
+---
+
+## 📅 প্রজেক্টের সময়সীমা ও অগ্রগতি (Milestones)
+
+*   **ডেডলাইন (৬০ মার্কস):** ১৭ এপ্রিল ২০২৬ | ১১:৫৯ PM
+*   **Git Commits:** কমপক্ষে ৮টি অর্থবহ কমিট নিশ্চিত করা হয়েছে।
+*   **Deployment:** Vercel/Netlify-তে সফলভাবে ডিপ্লয় করা হয়েছে।
+
+---
+
+## 👤 ডেভেলপার
+**[আপনার নাম]**
+*   Full-Stack Web Developer
+*   Diploma in Engineering (Faridpur Polytechnic Institute)
+
+---
+
+⭐ আপনি যদি এই প্রোজেক্টটি পছন্দ করেন, তবে একটি স্টার দিতে ভুলবেন না!

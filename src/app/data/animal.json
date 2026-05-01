@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Shahiwal Red Bull",
+    "type": "Cow",
+    "breed": "Shahiwal",
+    "price": 150000,
+    "weight": 350,
+    "age": 3,
+    "location": "Pabna",
+    "description": "চমৎকার লাল রঙের শাহীওয়াল গরু। সম্পূর্ণ প্রাকৃতিক খাবারে লালিত-পালিত।",
+    "image": "/images/cow1.jpg",
+    "category": "Large"
+  },
+  {
+    "id": 2,
+    "name": "Deshi Kalo Goru",
+    "type": "Cow",
+    "breed": "Local",
+    "price": 95000,
+    "weight": 220,
+    "age": 2,
+    "location": "Bogura",
+    "description": "কুরবানির জন্য উপযুক্ত সুস্থ দেশি কালো গরু।",
+    "image": "/images/cow2.jpg",
+    "category": "Medium"
+  },
+  {
+    "id": 3,
+    "name": "Australian White Bull",
+    "type": "Cow",
+    "breed": "Australian",
+    "price": 420000,
+    "weight": 600,
+    "age": 4,
+    "location": "Dhaka",
+    "description": "বিশাল আকৃতির সাদা অস্ট্রেলিয়ান গরু। মাংসের জন্য সেরা পছন্দ।",
+    "image": "/images/cow3.jpg",
+    "category": "Extra Large"
+  },
+  {
+    "id": 4,
+    "name": "Gir Bull Premium",
+    "type": "Cow",
+    "breed": "Gir",
+    "price": 280000,
+    "weight": 450,
+    "age": 3,
+    "location": "Rajshahi",
+    "description": "উন্নত জাতের গির গরু। দেখতে অত্যন্ত আকর্ষণীয় ও স্বাস্থ্যবান।",
+    "image": "/images/cow4.jpg",
+    "category": "Large"
+  },
+  {
+    "id": 5,
+    "name": "Sindhi Brown Bull",
+    "type": "Cow",
+    "breed": "Sindhi",
+    "price": 175000,
+    "weight": 330,
+    "age": 3,
+    "location": "Chittagong",
+    "description": "ব্রাউন কালারের সিন্ধি গরু। কুরবানির হাটের অন্যতম আকর্ষণ।",
+    "image": "/images/cow5.jpg",
+    "category": "Large"
+  },
+  {
+    "id": 6,
+    "name": "Holstein Friesian",
+    "type": "Cow",
+    "breed": "Friesian",
+    "price": 320000,
+    "weight": 520,
+    "age": 4,
+    "location": "Sirajganj",
+    "description": "সাদা-কালো হলস্টাইন ফ্রিজিয়ান গরু। প্রচুর মাংসল ও স্বাস্থ্যবান।",
+    "image": "/images/cow6.jpg",
+    "category": "Extra Large"
+  }
+]

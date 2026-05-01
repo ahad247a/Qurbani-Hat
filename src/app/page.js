@@ -1,5 +1,6 @@
 // app/page.js
 import Link from 'next/link';
+import FeaturedAnimals from './components/FeaturedAnimals';
 
 export default function HomePage() {
   return (
@@ -37,7 +38,7 @@ export default function HomePage() {
       
       <section className="py-16 max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Featured Animals</h2>
-        <p className="text-center text-gray-500">এখানে শীঘ্রই আমাদের সেরা পশুগুলো দেখতে পাবেন...</p>
+      <FeaturedAnimals />
       </section>
     </div>
   );

@@ -1,8 +1,10 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']); // Google DNS সার্ভার ব্যবহার করা হচ্ছে
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient("mongodb://localhost:27017/database");
+const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db();
 
 export const auth = betterAuth({
@@ -10,4 +12,7 @@ export const auth = betterAuth({
    
     client
   }),
+  emailAndPassword:{
+    enabled: true
+  }
 });

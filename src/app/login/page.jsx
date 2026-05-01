@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { authClient } from "@/lib/auth-client"; // আপনার পাথ অনুযায়ী চেক করে নিন
+import { authClient } from "@/lib/auth-client"; 
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
@@ -14,11 +14,11 @@ export default function LoginPage() {
         setIsLoading(true);
 
         try {
-            // BetterAuth এর সাইন-ইন ফাংশন
+            
             await authClient.signIn.email({
                 email,
                 password,
-                callbackURL: "/my-profile", // লগইন সফল হলে যেখানে যাবে
+                callbackURL: "/my-profile", 
             }, {
                 onSuccess: () => {
                     alert("লগইন সফল হয়েছে!");
@@ -35,7 +35,7 @@ export default function LoginPage() {
         }
     };
 
-    // গুগল দিয়ে লগইন করার ফাংশন (ঐচ্ছিক, যদি সেটআপ করা থাকে)
+    
     const handleGoogleLogin = async () => {
         await authClient.signIn.social({
             provider: "google",

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import animalsData from '../data/animal.json';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion'; 
-import { authClient } from "@/lib/auth-client"; // সেশন চেক করার জন্য
+import { authClient } from "@/lib/auth-client";
 
 export default function AllAnimalsPage() {
   const [animals, setAnimals] = useState(animalsData);
@@ -18,13 +18,13 @@ export default function AllAnimalsPage() {
     setAnimals(sortedData);
   };
 
-  // বিস্তারিত দেখার জন্য লগইন চেক লজিক
+ 
   const handleViewDetails = (id) => {
     if (session) {
-      // সেশন থাকলে এনিমেল ডিটেইলস পেজে নিয়ে যাবে
+      
       router.push(`/animals/${id}`);
     } else {
-      // সেশন না থাকলে লগইন পেজে নিয়ে যাবে
+      
       router.push("/login");
     }
   };
@@ -106,7 +106,7 @@ export default function AllAnimalsPage() {
                   <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">বিক্রয় মূল্য</p>
                   <p className="text-3xl font-black text-green-600">৳{animal.price.toLocaleString()}</p>
                 </div>
-                {/* Link এর বদলে button ব্যবহার করা হয়েছে লজিক হ্যান্ডেল করার জন্য */}
+                
                 <button 
                   onClick={() => handleViewDetails(animal.id)}
                   className="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-green-600 hover:shadow-lg hover:shadow-green-200 transition-all duration-300 active:scale-95"

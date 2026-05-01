@@ -9,7 +9,7 @@ export default function MyProfile() {
   const { data: session, isPending } = authClient.useSession();
   const router = useRouter();
 
-  // এরর ফিক্স: রাউটিং useEffect এর ভেতর নিতে হয়
+ 
   useEffect(() => {
     if (!isPending && !session) {
       router.push("/login");
@@ -24,7 +24,7 @@ export default function MyProfile() {
     );
   }
 
-  // সেশন না থাকলে কিছু রেন্ডার হবে না (useEffect রিডাইরেক্ট করবে)
+  
   if (!session) return null;
 
   const { user } = session;

@@ -9,14 +9,14 @@ export default function FeaturedAnimals() {
   const { data: session } = authClient.useSession();
   const router = useRouter();
 
-  // সরাসরি JSON থেকে প্রথম ৩টি এনিমেল নেওয়া হচ্ছে (useEffect এর দরকার নেই)
+  
   const featured = allAnimals.slice(0, 3);
 
   const handleViewDetails = (id) => {
     if (session) {
       router.push(`/animals/${id}`);
     } else {
-      // লগইন না থাকলে সরাসরি লগইন পেজে পাঠিয়ে দেবে
+      
       router.push("/login");
     }
   };

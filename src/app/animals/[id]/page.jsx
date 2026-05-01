@@ -1,15 +1,14 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import allAnimals from "../../data/animal.json"; // আপনার JSON ফাইলের পাথ অনুযায়ী ইমপোর্ট নিশ্চিত করুন
+import allAnimals from "../../data/animal.json"; 
 import { motion } from "framer-motion";
-import { ArrowLeft, MapPin, Scale, Calendar, Info } from "lucide-react"; // আইকন ব্যবহারের জন্য
-
+import { ArrowLeft, MapPin, Scale, Calendar, Info } from "lucide-react";
 export default function AnimalDetails() {
   const params = useParams();
   const router = useRouter();
   const { id } = params;
 
-  // ডাটা টাইপ ঠিক রেখে এনিমেল খুঁজে বের করা
+  
   const animal = allAnimals.find((item) => Number(item.id) === Number(id));
 
   if (!animal) {
@@ -25,7 +24,7 @@ export default function AnimalDetails() {
     <div className="min-h-screen bg-gray-50 pt-28 pb-20 px-4">
       <div className="max-w-6xl mx-auto">
         
-        {/* Back to Home Button */}
+      
         <button 
           onClick={() => router.push("/")}
           className="flex items-center gap-2 text-gray-600 hover:text-green-600 font-bold mb-8 transition-colors group"
@@ -36,7 +35,7 @@ export default function AnimalDetails() {
 
         <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-gray-200/50 overflow-hidden border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-0">
           
-          {/* Left: Image Section */}
+       
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -55,7 +54,7 @@ export default function AnimalDetails() {
             </div>
           </motion.div>
 
-          {/* Right: Info Section */}
+          
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -68,7 +67,7 @@ export default function AnimalDetails() {
               ৳ {animal.price.toLocaleString()}
             </p>
 
-            {/* Information Grid */}
+          
             <div className="grid grid-cols-2 gap-6 mb-10">
               <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl border border-gray-100">
                 <div className="bg-white p-2 rounded-lg shadow-sm text-green-600"><Scale size={20} /></div>
@@ -103,7 +102,7 @@ export default function AnimalDetails() {
               </div>
             </div>
 
-            {/* Description */}
+            
             <div className="mb-10">
               <h4 className="text-lg font-bold text-gray-800 mb-3">বিস্তারিত বর্ণনা:</h4>
               <p className="text-gray-500 leading-relaxed text-lg">
@@ -111,7 +110,7 @@ export default function AnimalDetails() {
               </p>
             </div>
 
-            {/* Action Button */}
+            
             <button className="w-full py-5 bg-green-600 text-white rounded-2xl font-black text-xl hover:bg-green-700 transition-all shadow-xl shadow-green-100 active:scale-[0.98]">
               অর্ডার করতে যোগাযোগ করুন
             </button>

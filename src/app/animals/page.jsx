@@ -2,13 +2,15 @@
 "use client";
 import { useState } from 'react';
 import animalsData from '../data/animal.json';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion'; 
+import { authClient } from "@/lib/auth-client"; // সেশন চেক করার জন্য
 
 export default function AllAnimalsPage() {
   const [animals, setAnimals] = useState(animalsData);
+  const { data: session } = authClient.useSession();
+  const router = useRouter();
 
-  
   const handleSort = (order) => {
     const sortedData = [...animals].sort((a, b) => {
       return order === 'low-to-high' ? a.price - b.price : b.price - a.price;
@@ -16,22 +18,31 @@ export default function AllAnimalsPage() {
     setAnimals(sortedData);
   };
 
+  // বিস্তারিত দেখার জন্য লগইন চেক লজিক
+  const handleViewDetails = (id) => {
+    if (session) {
+      // সেশন থাকলে এনিমেল ডিটেইলস পেজে নিয়ে যাবে
+      router.push(`/animals/${id}`);
+    } else {
+      // সেশন না থাকলে লগইন পেজে নিয়ে যাবে
+      router.push("/login");
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 min-h-screen">
-      
       
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col md:flex-row justify-between items-center mb-12 border-b pb-8"
+        className="flex flex-col md:flex-row justify-between items-center mb-12 border-b pb-8 mt-20"
       >
         <div>
           <h1 className="text-4xl font-extrabold text-gray-800">আমাদের পশুর হাট</h1>
-          <p className="text-gray-500 mt-2 font-medium">আপনার কুরবানির জন্য সেরা পশুটি বেছে নিন ({animals.length}টি পাওয়া গেছে)</p>
+          <p className="text-gray-500 mt-2 font-medium">আপনার কুরবানির জন্য সেরা পশুটি বেছে নিন ({animals.length}টি পাওয়া গেছে)</p>
         </div>
         
-       
         <div className="mt-6 md:mt-0 flex gap-4">
           <button 
             onClick={() => handleSort('low-to-high')} 
@@ -48,7 +59,6 @@ export default function AllAnimalsPage() {
         </div>
       </motion.div>
 
-    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {animals.map((animal, index) => (
           <motion.div 
@@ -62,7 +72,7 @@ export default function AllAnimalsPage() {
           >
             
             <div className="relative h-72 overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src={animal.image} 
                 alt={animal.name} 
@@ -75,7 +85,6 @@ export default function AllAnimalsPage() {
               </div>
             </div>
 
-            
             <div className="p-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-green-600 transition-colors">
                 {animal.name}
@@ -94,15 +103,16 @@ export default function AllAnimalsPage() {
 
               <div className="flex justify-between items-center pt-2">
                 <div>
-                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">বিক্রয় মূল্য</p>
+                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest mb-1">বিক্রয় মূল্য</p>
                   <p className="text-3xl font-black text-green-600">৳{animal.price.toLocaleString()}</p>
                 </div>
-                <Link 
-                  href={`/details/${animal.id}`} 
-                  className="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-green-600 hover:shadow-lg hover:shadow-green-200 transition-all duration-300"
+                {/* Link এর বদলে button ব্যবহার করা হয়েছে লজিক হ্যান্ডেল করার জন্য */}
+                <button 
+                  onClick={() => handleViewDetails(animal.id)}
+                  className="bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-green-600 hover:shadow-lg hover:shadow-green-200 transition-all duration-300 active:scale-95"
                 >
                   বিস্তারিত
-                </Link>
+                </button>
               </div>
             </div>
           </motion.div>

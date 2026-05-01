@@ -60,18 +60,11 @@
     ```
     এখন ব্রাউজারে `http://localhost:3000` লিঙ্কে গিয়ে প্রোজেক্টটি দেখুন।
 
----
-
-## 📅 প্রজেক্টের সময়সীমা ও অগ্রগতি (Milestones)
-
-*   **ডেডলাইন (৬০ মার্কস):** ১৭ এপ্রিল ২০২৬ | ১১:৫৯ PM
-*   **Git Commits:** কমপক্ষে ৮টি অর্থবহ কমিট নিশ্চিত করা হয়েছে।
-*   **Deployment:** Vercel/Netlify-তে সফলভাবে ডিপ্লয় করা হয়েছে।
 
 ---
 
 ## 👤 ডেভেলপার
-**[আপনার নাম]**
+**[Sheikh Ahad]**
 *   Full-Stack Web Developer
 *   Diploma in Engineering (Faridpur Polytechnic Institute)
 

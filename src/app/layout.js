@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        
+        {/* Main content area with padding to prevent overlap with fixed navbar */}
         <main className="pt-28 grow"> 
           {children}
         </main>
